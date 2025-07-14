@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  margin-bottom: .5rem;
+  margin-top: 2rem;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 300;
+}
+
+main {
+  min-height: 50vh;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: .4rem; 
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f0ffff;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  height: 100%;
+  width: 100%;
+  background-color: #a1d3d3;
+  border: none;
+  font-size: clamp(2.5rem, 12vw, 5rem);
+  font-weight: 300;
+  font-family: 'Ubuntu', sans-serif;
+  color: #213836;
+}
+
+button:hover {
+  background-color: #8fc0c0;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+#btn-1 {
+  border-radius: 10px 0 0 0;
+}
+#btn-3 {
+  border-radius: 0 10px 0 0;
+}
+#btn-7 {
+  border-radius: 0 0 0 10px;
+}
+#btn-9 {
+  border-radius: 0 0 10px 0;
+}
+
+#result-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 25rem;
+  gap: 1rem;
+} 
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#result-container p{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+  margin-bottom: 0.25rem;
+}
+
+#result-container span{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.4rem, 4vw, 1.7rem);
+  color: #213836;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 0.5rem;
+    min-height: 30vh; 
+    max-width: 100%; 
+  }
+
+  header > div > label{
+    display: block;
+    padding-top: 1rem;
+  }
+
+  #fields {
+    gap: 0.3rem; 
+    margin-bottom: 1rem;
+  }
+
+  #result-container {
+    flex-direction: column; 
+    gap: 0.5rem; 
+    margin-top: 1rem; 
+  }
+ }

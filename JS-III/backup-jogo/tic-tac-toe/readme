@@ -1,0 +1,9 @@
+/*
+clamp - tamanho minimo, presencial, maximo > ok
+aspect-ratio > ok (enquadramento do container)
+grid-template > ok (numero de linhas ou colunas)
+media queries > ok
+gap > ok (espaçamento entre os grids)
+justify-content: space-around; > ok
+align-items: center; > ok
+*/

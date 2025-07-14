@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <script src="jogoDaVelha.js" defer></script>
+  <link rel="stylesheet" href="jogoDaVelha.css">
+  <title>Jogo da Velha</title>
+</head>
+<body>
+  <h1 id="title">JOGO DA VELHA</h1>
+
+  <div id="setup-screen"> 
+    <div class="form-group">
+      <label for="player1-name-input">Name Player 1 (X):</label>
+      <input type="text" id="player1-name-input" placeholder="Player 1" maxlength="11">
+    </div>
+    <div class="form-group">
+      <label for="player2-name-input">Name Player 2 (O):</label>
+      <input type="text" id="player2-name-input" placeholder="Player 2" maxlength="11">
+    </div>
+    
+    <button id="start-game-button">START</button>
+  </div>
+
+  <div id="game-screen" class="hidden">
+    <main>
+      <div id="fields">
+        <button id="btn-1" class="btn"></button>
+        <button id="btn-2" class="btn"></button>
+        <button id="btn-3" class="btn"></button>
+        <button id="btn-4" class="btn"></button>
+        <button id="btn-5" class="btn"></button>
+        <button id="btn-6" class="btn"></button>
+        <button id="btn-7" class="btn"></button>
+        <button id="btn-8" class="btn"></button>
+        <button id="btn-9" class="btn"></button>
+      </div>
+
+      <div id="result-container">
+        <div class="player-info">
+          <p id="player-x">PLAYER 1: (X)</p>
+          <span id="result-player1">0</span>
+        </div>
+        <div class="player-info">
+          <p id="draw">DRAW</p>
+          <span id="result-draw">0</span>
+        </div>
+        <div class="player-info">
+          <p id="player-y">PLAYER 2: (O)</p>
+          <span id="result-player2">0</span>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
