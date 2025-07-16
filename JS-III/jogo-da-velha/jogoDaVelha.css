@@ -191,6 +191,7 @@ button:disabled {
 #result-container p{
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
+  color: var(--font-color);
   font-size: clamp(1.2rem, 3.5vw, 1.5rem);
   margin-bottom: 0.25rem;
 }
