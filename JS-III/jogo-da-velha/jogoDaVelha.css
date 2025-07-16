@@ -4,8 +4,15 @@
   padding: 0;
 }
 
+:root {
+  --bg-color: #e7e9e9f0;
+  --bg-color-div: #ffffff;
+  --bg-color-button: #a1d3d3;
+  --font-color: #213836;
+}
+
 body {
-  background-color: #e5eeef;
+  background-color: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +21,8 @@ body {
 
 h1 {
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 400;
+  font-weight: 300;
+  color: var(--font-color);
   margin-bottom: 1rem;
   font-family: 'Ubuntu', sans-serif;
   margin-top: 4rem;
@@ -26,13 +34,13 @@ h1 {
   right: 30px;
   height: 2rem;
   width: 4rem;
-  background-color: #ffffff;
+  background-color: var(--bg-color-div);
+  color: var(--font-color);
   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   align-items: center;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
-  
 }
 
 .hidden {
@@ -47,7 +55,7 @@ h1 {
   min-height: 40vh;
   width: 100%;
   max-width: 20rem;
-  background-color: #ffffff;
+  background-color: var(--bg-color-div);
   box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -59,6 +67,7 @@ h1 {
 .form-group label {
   display: block;
   font-family: 'Ubuntu', sans-serif;
+  color: var(--font-color);
   font-weight: 400;
   font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -66,7 +75,7 @@ h1 {
 }
 
 .form-group input {
-  background-color: #e5eeef;
+  background-color: #e7e9e9f0;
   padding: 0.5rem;
   border-radius: 5px;
   border: 2px solid #cbd5e1;
@@ -87,7 +96,7 @@ h1 {
 }
 
 #start-game-button {
-  background-color: #8fc0c0;
+  background-color: var(--bg-color-button);
   font-size: 1.2rem;
   font-weight: 300;
   font-family: 'Ubuntu', sans-serif;
@@ -133,7 +142,7 @@ main {
 button {
   height: 100%;
   width: 100%;
-  background-color: #a1d3d3;
+  background-color: var(--bg-color-button);
   border: none;
   font-size: clamp(2.5rem, 12vw, 5rem);
   font-weight: 300;
