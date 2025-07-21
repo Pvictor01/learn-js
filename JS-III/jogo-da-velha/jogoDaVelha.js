@@ -1,3 +1,4 @@
+const body = document.querySelector('body')
 const setupScreenEl = document.getElementById('setup-screen')
 const gameScreenEl = document.getElementById('game-screen')
 const player1InputEl = document.getElementById('player1-name-input')
@@ -158,4 +159,8 @@ startGameBtn.addEventListener('click', () => {
 
 buttons.forEach((btn, index) => {
   btn.addEventListener('click', (event) => {handleCellClick(event, index)})
+})
+
+document.getElementById('theme-switcher').addEventListener('click', () => {
+  body.classList.toggle('dark-theme')
 })
