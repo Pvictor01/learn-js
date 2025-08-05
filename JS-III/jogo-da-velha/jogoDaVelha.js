@@ -147,8 +147,8 @@ function handleCellClick(event, index) {
 }
 
 startGameBtn.addEventListener('click', () => {
-  const player1Name = player1InputEl.value || 'Jogador 1 '
-  const player2Name = player2InputEl.value || 'Jogador 2 ' 
+  const player1Name = player1InputEl.value || 'Player 1 '
+  const player2Name = player2InputEl.value || 'Player 2 ' 
 
   playerXTextEl.innerText = `${player1Name}(X)`
   playerOTextEl.innerText = `${player2Name}(O)`
