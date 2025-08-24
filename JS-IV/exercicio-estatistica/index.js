@@ -22,5 +22,22 @@ console.log('A media Ponderada é: ' + result);
 
 //- **Mediana:** Pode ser calculada encontrando o valor central de uma sequência de números crescente ou decrescente. Caso existam dois números centrais, a mediana é calculada através da média aritmética simples desses dois números.
 const median = (...numbers) => {
+  const sortedNumbers = numbers.sort((a, b) => a - b) //a - b retorna o array crescente
+  const middleIndex = Math.floor(sortedNumbers.length / 2)
 
+  if(sortedNumbers.length % 2 === 0) {
+    console.log(`O array crescente é: ${sortedNumbers}
+                \nMediana: (${sortedNumbers[middleIndex - 1]} + ${sortedNumbers[middleIndex]}) / 2
+                \nResultado = ${(sortedNumbers[middleIndex - 1] + sortedNumbers[middleIndex]) / 2}
+               `)  
+  } else {
+    console.log(`O array crescente é: ${sortedNumbers}
+      \nMediana: ${sortedNumbers[middleIndex]}
+    `) 
+  }
 }
+
+median(3, 10, 99, 80, 50, 70, 2)
+
+
+
