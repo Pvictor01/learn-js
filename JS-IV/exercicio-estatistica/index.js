@@ -39,5 +39,7 @@ const median = (...numbers) => {
 
 median(3, 10, 99, 80, 50, 70, 2)
 
-
-
+//Moda: Pode ser calculada encontrando o valor que mais se repete em um dado conjunto.
+const mode = (...numbers) => {
+  
+}
