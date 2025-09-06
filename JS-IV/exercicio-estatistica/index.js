@@ -42,10 +42,6 @@ median(3, 10, 99, 80, 50, 70, 2)
 //Moda: Pode ser calculada encontrando o valor que mais se repete em um dado conjunto.
 const mode = (...numbers) => {
   const count = {}
-
-  let maxFrequency = 0
-  let modeValue
-
   numbers.forEach(num => {
     if(num in count) {
       count[num]++
@@ -54,16 +50,21 @@ const mode = (...numbers) => {
     }
   })
 
+  let maxFrequency = 0
+  let modes = []
+
   for(const num in count) {
     if(count[num] > maxFrequency) {
       maxFrequency = count[num]
-      modeValue = num
+      modes = [num] // Reinicia a lista com o novo campeão
+    } else if(count[num] === maxFrequency) {
+      modes.push(num) // Adiciona à lista em caso de empate
     }
   }
-
+ 
   console.log(count)
   
-  return Number(modeValue)  
+  return modes.map(num => Number(num))
 }
 
-console.log('A moda é: ' + mode(5, 5, 1, 2, 2, 10, 3, 6, 99, 3))
+console.log('A moda é: ' + mode(5, 3, 6, 99, 3, 5, 2, 2, 1).join(', '))
