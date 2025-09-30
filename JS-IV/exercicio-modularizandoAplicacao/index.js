@@ -26,7 +26,7 @@ input.addEventListener('keydown', function(ev) {
   } 
 
   if(ev.key === 'Backspace') {
-    input.value = input.value.slice(0, -1)
+    input.value = input.value.slice(0, -1)//'fatiar' do zero até o ultimo caractere, mas sem incluí-lo
   }
  
   if(ev.key === 'Enter') {
@@ -34,7 +34,7 @@ input.addEventListener('keydown', function(ev) {
   }
 })
 
-document.getElementById('equal').addEventListener('click', calculate)
+document.getElementById('equal').addEventListener('click', calculate) //sem parenteses para o js nao executar a funcao sem clicar
  
 function calculate() {
   resultInput.value = 'Error'
