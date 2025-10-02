@@ -1,6 +1,7 @@
 import { clickValidation, clear, equal } from "./click.js"
 import themeSwitcher from "./themeSwitcher.js"
 import keydown from "./keydown.js"
+import copyClicboard from "./copyClicboard.js"
 
 const main = document.querySelector('main')
 const root = document.querySelector(':root')
@@ -13,6 +14,7 @@ clear(input)
 equal(calculate)
 keydown(input, allowedKeys, calculate)
 themeSwitcher(main, root)
+copyClicboard(resultInput)
  
 function calculate() {
   resultInput.value = 'Error'
@@ -22,16 +24,3 @@ function calculate() {
   resultInput.value = result
   resultInput.classList.remove('error')
 }
-
-document.getElementById('copyToClipboard').addEventListener('click', function(ev) {
-  const button = ev.currentTarget
-
-  if(button.innerText === 'Copy') {
-    button.innerText = 'Copied!'
-    button.classList.add('success')
-    navigator.clipboard.writeText(resultInput.value)//no navegador pega o valor textual que está dentro do elemento resultInput
-  } else {
-    button.innerText = 'Copy'
-    button.classList.remove('success')
-  }
-})
