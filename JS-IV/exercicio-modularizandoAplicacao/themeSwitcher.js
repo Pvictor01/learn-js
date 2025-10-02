@@ -1,0 +1,18 @@
+//No lugar de importar os elementos, correto é atribuir como argumentos da funçao 
+const themeSwitcher = (main, root) => document.getElementById('themeSwitcher').addEventListener('click', function() {
+  if(main.dataset.theme === 'dark') {
+    root.style.setProperty('--bg-color', '#f1f5f9dd')
+    root.style.setProperty('--border-color', '#aaa')
+    root.style.setProperty('--font-color', '#212529')
+    root.style.setProperty('--primary-color', '#26834a')
+    main.dataset.theme = 'light'
+  } else {
+    root.style.setProperty('--bg-color', '#212529')
+    root.style.setProperty('--border-color', '#666')
+    root.style.setProperty('--font-color', '#f1f5f9')
+    root.style.setProperty('--primary-color', '#4dff91')
+    main.dataset.theme = 'dark'
+  }
+})
+
+export default themeSwitcher
