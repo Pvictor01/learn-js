@@ -1,4 +1,4 @@
-import { clickValidation, clear } from "./click.js"
+import { clickValidation, clear, equal } from "./click.js"
 import themeSwitcher from "./themeSwitcher.js"
 import keydown from "./keydown.js"
 
@@ -10,10 +10,9 @@ const allowedKeys = ["(", ")", "/", "*", "-", "+", "9", "8", "7", "6", "5", "4",
 
 clickValidation(input)
 clear(input) 
+equal(calculate)
 keydown(input, allowedKeys, calculate)
 themeSwitcher(main, root)
-
-document.getElementById('equal').addEventListener('click', calculate) //sem parenteses para o js nao executar a funcao sem clicar
  
 function calculate() {
   resultInput.value = 'Error'

@@ -10,4 +10,6 @@ const clear = (input) => document.getElementById('clear').addEventListener('clic
   input.focus()
 })
 
-export { clickValidation, clear }
+const equal = (calculate) => document.getElementById('equal').addEventListener('click', calculate) //sem parenteses para o js nao executar a funcao sem clicar
+
+export { clickValidation, clear, equal }
