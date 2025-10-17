@@ -1,27 +1,24 @@
 const dayjs = require('dayjs')
-dayjs().format('DD-MM-YYYY')
+const customParseFormat = require('dayjs/plugin/customParseFormat');
+dayjs.extend(customParseFormat);
 
-const date1 = dayjs('03-01-2001').format('DD-MM-YYYY')
-const date2 = dayjs('09-10-2025').format('DD-MM-YYYY')
-const addYear = dayjs(date2).add(1, 'year')
+const dataOfBirth = dayjs('03-01-2001', 'DD-MM-YYYY')
+const today = dayjs().startOf('day')
+const addYear = dayjs(today).add(1, 'year')
 
-const dataOfBirth = dayjs('03-01-2001')
-
-const today = dayjs().startOf('day').format('DD-MM-YYYY-HH:mm:ss')
-
-function age(today) {
+function getAge(today) {
   return today.diff(dataOfBirth, 'year')
 }
 
-function nextBirthday(day) {
-  const addYears = dayjs(dataOfBirth).add(age(dayjs(day)) + 1, 'year')
-
-  const nextBirth = addYears.diff(dayjs(day), 'day')
+function nextBirthday(today) {
+  const addYears = dayjs(dataOfBirth).add(getAge(dayjs(today)) + 1, 'year') //add +1 ano a idade atual
+  const nextBirth = addYears.diff(dayjs(today), 'day') //diferença de dias entre hoje e o proximo aniversario
 
   return nextBirth
 }
 
-console.log(dayjs(date2).diff(dayjs(date1), 'year') + ' anos')
-console.log(addYear.format('DD-MM-YYYY'))
-console.log(`Idade: ${age(dayjs(today))} anos`)
-console.log(`Próximo Aniversário em: ${nextBirthday(dayjs(today))} dias`)
+//console.log(`${dayjs(today).diff(dayjs(dataOfBirth), 'year')} anos`) // retorna idade, mas ideal fazer uma funçao
+console.log(`Hoje é: ${dayjs(today).format('DD/MM/YYYY')}`) //data atual
+console.log(`Adcionando ano: ${dayjs(addYear).format('DD/MM/YYYY')}`) //ex adicionando ano a data
+console.log(`Idade: ${getAge(dayjs(today))} anos`) //retorna idade
+console.log(`Próximo Aniversário em: ${nextBirthday(dayjs(today))} dias`) //retorna os dias para o prox aniversario
