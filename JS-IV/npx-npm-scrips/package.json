@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "hello": "hello-world-npm"
+    "hello": "hello-world-npm",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
