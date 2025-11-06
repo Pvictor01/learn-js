@@ -1,6 +1,12 @@
 module.exports = {
   entry: {
-    main: './src/index.js',
+    index: './src/index.js',
   },
-  mode: 'development'
+  mode: 'development',
+  module: {
+    rules: [{
+      test: /\.css$/,     //procurar todos os arquivos que terminam com .css
+      use: ['style-loader', 'css-loader']  //loaders utilizados
+    }]
+  }
 }
