@@ -5,7 +5,7 @@ module.exports = {
     index: './src/index.js',
     hello: './src/hello.js'
   },
-  mode: 'development',
+  mode: 'production',
   output: {
     //path: path.resolve(__dirname, 'public'), //pega o nome do caminho do dir, cria a pasta public e nela coloca a entrada -> public/main.js
     filename: '[name].min.js'
