@@ -17,5 +17,7 @@ try {
   console.log(sum(13, "zero"))
 } catch (err){
   console.log('An error ocurred!')
-  console.log(err.message)
+  console.log(err.message) //Mostra a mensagem de erro do new Error da função sum
+} finally { //Sempre sera executado no final
+  console.log('Calculations finished!')
 }
