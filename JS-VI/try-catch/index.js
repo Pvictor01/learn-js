@@ -15,6 +15,7 @@ try {
   console.log(sum(18, "0"))
   console.log(sum(39, null))
   console.log(sum(13, "zero"))
-} catch {
+} catch (err){
   console.log('An error ocurred!')
+  console.log(err.message)
 }
